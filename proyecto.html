@@ -1,0 +1,313 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Junta de Castilla y León - Emergency Valladolid </title>
+    </head>
+    
+    <style>
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9f0f4;
+  color: #333;
+}
+
+/* Menú lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #004b23;
+  padding-top: 50px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.2);
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  background-color: #2ca6a4;
+  color: #fff;
+}
+
+/* Contenido principal */
+.main {
+  margin-left: 250px;
+  padding: 20px 10%;
+}
+
+/* Secciones */
+section {
+  background-color: #fff;
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+section h2 {
+  color: #004b23;
+  margin-bottom: 20px;
+  border-left: 6px solid #2ca6a4;
+  padding-left: 12px;
+  font-size: 2em;
+}
+
+/* Animaciones de entrada */
+section {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.7s ease-out;
+}
+section.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Listas */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Tabla de vehículos */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: center;
+}
+th {
+  background-color: #004b23;
+  color: #fff;
+}
+
+/* Galería */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.galeria figure {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.galeria figure:hover {
+  transform: scale(1.05);
+}
+.galeria img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.4s;
+}
+.galeria figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,75,35,0.8);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.galeria figure:hover figcaption {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #002f15;
+  color: #ddd;
+  text-align: center;
+  padding: 20px 10%;
+  margin-top: 40px;
+}
+footer a {
+  color: #8de0d1;
+  margin: 0 8px;
+}
+
+/* Botón volver arriba */
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004b23;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+}
+#btnTop:hover {
+  background-color: #2ca6a4;
+}
+</style>
+</head>
+<body>
+
+<!-- Menú lateral -->
+<div class="sidebar">
+  <a href="#presentacion">Inicio</a>
+  <a href="#unidades">Unidades</a>
+  <a href="#misiones">Misiones</a>
+  <a href="#vehiculos">Vehículos</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contacto</a>
+</div>
+
+<!-- Contenido principal -->
+<div class="main">
+
+  <!-- Presentación -->
+  <section id="presentacion">
+    <h2>Presentación</h2>
+    <p>Bienvenido al portal ultra-profesional de la Junta de Castilla y León dentro del universo del juego <em>Emergency Valladolid</em>. Explora todas las unidades, misiones y vehículos disponibles para jugadores en el servidor de rol.</p>
+  </section>
+
+  <!-- Unidades -->
+  <section id="unidades">
+    <h2>Unidades Disponibles</h2>
+    <ul>
+      <li><strong>Sanidad:</strong> ambulancias, UVIs móviles y atención médica rápida.</li>
+      <li><strong>Bomberos Regionales:</strong> extinción de incendios, rescates y emergencias urbanas.</li>
+      <li><strong>Guardia Civil:</strong> patrullas, control de tráfico y coordinación de emergencias.</li>
+      <li><strong>Protección Civil:</strong> apoyo logístico, evacuaciones y gestión de crisis.</li>
+    </ul>
+  </section>
+
+  <!-- Misiones -->
+  <section id="misiones">
+    <h2>Misiones y Escenarios</h2>
+    <ul>
+      <li>Accidentes en carretera con múltiples vehículos.</li>
+      <li>Incendios rurales en campos y bosques.</li>
+      <li>Rescates en zonas remotas o de montaña.</li>
+      <li>Eventos masivos con coordinación de sanidad y seguridad.</li>
+    </ul>
+    <p><em>Ejemplo de misión:</em> Incendio en la Sierra de Salamanca: coordinación de bomberos, Guardia Civil y sanidad para evacuar y atender heridos.</p>
+  </section>
+
+  <!-- Vehículos -->
+  <section id="vehiculos">
+    <h2>Vehículos Destacados</h2>
+    <table>
+      <tr>
+        <th>Unidad</th>
+        <th>Vehículo</th>
+      </tr>
+      <tr>
+        <td>Sanidad</td>
+        <td>Ambulancia básica y UVI móvil</td>
+      </tr>
+      <tr>
+        <td>Bomberos</td>
+        <td>Camión de agua y camión de rescate</td>
+      </tr>
+      <tr>
+        <td>Guardia Civil</td>
+        <td>Patrulla 4x4 y coche SUV con luces de emergencia</td>
+      </tr>
+      <tr>
+        <td>Protección Civil</td>
+        <td>Furgón logístico y vehículo todoterreno</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Galería -->
+  <section id="galeria">
+    <h2>Galería Interactiva</h2>
+    <div class="galeria">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Spain_guardia_civil_vehicle.jpg" alt="Vehículo Guardia Civil">
+        <figcaption>Vehículo de Guardia Civil</figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Fire_engine.jpg" alt="Camión de Bomberos">
+        <figcaption>Camión de Bomberos</figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Ambulancia.jpg" alt="Ambulancia de Emergencias">
+        <figcaption>Ambulancia SACYL</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Este portal es un recurso ficticio basado en el juego <em>Emergency Valladolid</em>.</p>
+    <ul>
+      <li>Correo: <strong>rol_castillaleon@evjuego.com</strong></li>
+      <li>Discord: enlace interno del servidor</li>
+      <li>Equipo de administración: responsables de rol regional</li>
+    </ul>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Junta de Castilla y León - Emergency Valladolid (versión rol). Todos los derechos reservados.</p>
+</footer>
+
+<!-- Botón volver arriba -->
+<button id="btnTop" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑ Subir</button>
+
+<script>
+// Mostrar botón al hacer scroll
+const btnTop = document.getElementById("btnTop");
+window.onscroll = function() {
+  if(document.documentElement.scrollTop > 300){
+    btnTop.style.display = "block";
+  } else {
+    btnTop.style.display = "none";
+  }
+}
+
+// Animación de entrada de secciones
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+    }
+  });
+}, {threshold: 0.1});
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
